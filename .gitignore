@@ -1,0 +1,23 @@
+# Fichiers temporaires Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+ 
+
+# Fichiers de cache
+__MACOSX/
+*.DS_Store
+
+# Fichiers de logs
+*.log
+
+# Fichiers de build
+*.apk
+*.unitypackag
+
+# Fichiers de sauvegarde
+*.bak
+*.backup
+/assets/video
+*.tmp
+UserSettings/EditorUserSettings.asset
