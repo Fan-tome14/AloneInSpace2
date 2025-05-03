@@ -31,6 +31,9 @@ public class PlayerAnimationController : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
         bool isMoving = Mathf.Abs(horizontal) > 0.1f || Mathf.Abs(vertical) > 0.1f;
 
+        // Détecter si la touche Shift est enfoncée pour la course
+        bool isRunning = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+
         // Déclenchement du saut
         if (Input.GetKeyDown(KeyCode.Space) && !isInJump)
         {
@@ -41,10 +44,17 @@ public class PlayerAnimationController : MonoBehaviour
             return;
         }
 
-        // Gestion du mouvement
+        // Gestion du mouvement et de la course
         if (isMoving)
         {
-            animator.Play("Rig|walk");
+            if (isRunning)
+            {
+                animator.Play("Rig|run"); // Animation de course
+            }
+            else
+            {
+                animator.Play("Rig|walk"); // Animation de marche
+            }
             idleTimer = 0f;
         }
         else

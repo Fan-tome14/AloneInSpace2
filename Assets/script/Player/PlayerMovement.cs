@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public float sprintMultiplier = 1.5f; // Facteur de sprint
     public float jumpForce = 5f;
     public Transform orientation;
     public Transform objectToRotate;
@@ -20,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Move();
 
+        // Vérifier si la touche espace est pressée pour sauter
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
@@ -31,10 +33,19 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal"); // Q/D
         float z = Input.GetAxisRaw("Vertical");   // Z/S
 
+        // Augmenter la vitesse si la touche Shift est enfoncée
+        float currentMoveSpeed = moveSpeed;
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+        {
+            currentMoveSpeed *= sprintMultiplier; // Appliquer le multiplicateur de sprint
+        }
+
+        // Calcul de la direction de mouvement
         Vector3 moveDir = orientation.forward * z + orientation.right * x;
         moveDir.Normalize();
 
-        rb.linearVelocity = new Vector3(moveDir.x * moveSpeed, rb.linearVelocity.y, moveDir.z * moveSpeed);
+        // Appliquer la vélocité de mouvement
+        rb.linearVelocity = new Vector3(moveDir.x * currentMoveSpeed, rb.linearVelocity.y, moveDir.z * currentMoveSpeed);
 
         // Appliquer la rotation seulement si le joueur se déplace
         if (moveDir.magnitude > 0.1f)
