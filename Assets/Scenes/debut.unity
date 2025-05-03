@@ -296,6 +296,7 @@ MonoBehaviour:
   moveSpeed: 5
   jumpForce: 5
   orientation: {fileID: 1272335846}
+  objectToRotate: {fileID: 1915669541}
 --- !u!136 &1008146546
 CapsuleCollider:
   m_ObjectHideFlags: 0
