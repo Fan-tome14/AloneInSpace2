@@ -2,10 +2,15 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public float sensitivity = 100f;
-    public Transform playerBody;
+    public Transform target; // Le joueur
+    public float distance = 5f;
+    public float height = 2f;
+    public float sensitivity = 5f;
+    public float minY = -15f;
+    public float maxY = 80f;
 
-    float xRotation = 0f;
+    private float rotationX = 0f;
+    private float rotationY = 10f;
 
     void Start()
     {
@@ -14,13 +19,16 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
+        rotationX += Input.GetAxis("Mouse X") * sensitivity;
+        rotationY -= Input.GetAxis("Mouse Y") * sensitivity;
+        rotationY = Mathf.Clamp(rotationY, minY, maxY);
 
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f); // empêcher de regarder à l'envers
+        Quaternion rotation = Quaternion.Euler(rotationY, rotationX, 0);
+        Vector3 position = target.position + rotation * new Vector3(0, 0, -distance);
+        position.y += height;
 
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        playerBody.Rotate(Vector3.up * mouseX);
+        transform.position = position;
+        transform.LookAt(target.position + Vector3.up * height);
     }
 }
+
