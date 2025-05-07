@@ -5451,6 +5451,7 @@ GameObject:
   - component: {fileID: 784722793}
   - component: {fileID: 784722792}
   - component: {fileID: 784722791}
+  - component: {fileID: 784722796}
   m_Layer: 0
   m_Name: Main camera
   m_TagString: MainCamera
@@ -5594,6 +5595,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1008146542}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &784722796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784722790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb30f22664f8e9409835cc59968bee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstPersonTarget: {fileID: 2124321294}
+  mouseSensitivity: 100
+  playerBody: {fileID: 1008146542}
 --- !u!1 &926305041 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5824825921570538172, guid: 69e5139e44761a4449b64dd0172b7086, type: 3}
@@ -11334,6 +11350,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!4 &2124321294 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8258562919408089312, guid: 420ebfd011fc52343bc47963c5a93033, type: 3}
+  m_PrefabInstance: {fileID: 1915669540}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
