@@ -1,42 +1,44 @@
 using UnityEngine;
 
-public class CameraModeSwitcher : MonoBehaviour
+[RequireComponent(typeof(CharacterController))]
+public class FpsPlayerController : MonoBehaviour
 {
-    public Transform firstPersonTarget; // généralement la tête ou le haut du personnage
-    public float mouseSensitivity = 100f;
+    [Header("Références")]
+    public Transform cameraTransform; // La caméra FPS (souvent Main Camera)
+    public Transform cameraTarget;    // Point de la tête
 
-    public Transform playerBody; // corps ou racine du personnage
+    [Header("Paramètres Joueur")]
+    public float mouseSensitivity = 100f;
+    public float moveSpeed = 5f;
+    public float gravity = -9.81f;
+    public float jumpHeight = 1.5f;
 
     private float xRotation = 0f;
-    private bool isFirstPerson = false;
+    private Vector3 velocity;
+    private bool isGrounded;
 
-    private CameraController thirdPersonScript;
+    private CharacterController controller;
 
     void Start()
     {
-        thirdPersonScript = GetComponent<CameraController>();
+        controller = GetComponent<CharacterController>();
+
+        if (cameraTransform == null)
+            Debug.LogError("CameraTransform n'est pas assigné !");
+        if (cameraTarget == null)
+            Debug.LogError("CameraTarget (tête) n'est pas assigné !");
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
     void Update()
     {
-        // Switch de caméra avec F5
-        if (Input.GetKeyDown(KeyCode.F5))
-        {
-            isFirstPerson = !isFirstPerson;
-
-            if (thirdPersonScript != null)
-                thirdPersonScript.enabled = !isFirstPerson;
-        }
-
-        if (isFirstPerson)
-        {
-            HandleFirstPersonView();
-        }
+        HandleMouseLook();
+        HandleMovement();
     }
 
-    void HandleFirstPersonView()
+    void HandleMouseLook()
     {
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
@@ -44,15 +46,37 @@ public class CameraModeSwitcher : MonoBehaviour
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        // Applique la rotation verticale à la caméra (pitch)
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        // Rotation du corps (yaw)
+        transform.Rotate(Vector3.up * mouseX);
 
-        // Applique la rotation horizontale au corps du joueur (yaw)
-        if (playerBody != null)
+        // Appliquer la rotation combinée à la caméra
+        cameraTransform.position = cameraTarget.position;
+        cameraTransform.rotation = Quaternion.Euler(xRotation, transform.eulerAngles.y, 0f);
+    }
+
+    void HandleMovement()
+    {
+        isGrounded = controller.isGrounded;
+
+        if (isGrounded && velocity.y < 0)
+            velocity.y = -2f;
+
+        float x = Input.GetAxis("Horizontal"); // Q / D
+        float z = Input.GetAxis("Vertical");   // Z / S
+
+        Vector3 move = transform.right * x + transform.forward * z;
+        controller.Move(move * moveSpeed * Time.deltaTime);
+
+        // Saut
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            playerBody.Rotate(Vector3.up * mouseX);
-            transform.position = firstPersonTarget.position; // la caméra suit la tête
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
+
+        // Gravité
+        velocity.y += gravity * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
     }
 }
+
 

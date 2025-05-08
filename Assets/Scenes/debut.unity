@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 271876144}
   - component: {fileID: 271876143}
   - component: {fileID: 271876148}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: portal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,9 +323,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 636215904476105104, guid: 6e17f43cda1ded4429b04b93e7b7da3c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6e17f43cda1ded4429b04b93e7b7da3c, type: 3}
       propertyPath: m_Name
       value: Sci-Fi Hanger
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6e17f43cda1ded4429b04b93e7b7da3c, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2839419621090707780, guid: 6e17f43cda1ded4429b04b93e7b7da3c, type: 3}
       propertyPath: 'm_Materials.Array.data[2]'
@@ -616,7 +624,7 @@ GameObject:
   - component: {fileID: 685748879}
   - component: {fileID: 685748881}
   - component: {fileID: 685748880}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5450,7 +5458,6 @@ GameObject:
   - component: {fileID: 784722794}
   - component: {fileID: 784722793}
   - component: {fileID: 784722792}
-  - component: {fileID: 784722791}
   - component: {fileID: 784722796}
   m_Layer: 0
   m_Name: Main camera
@@ -5459,24 +5466,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &784722791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 784722790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d53eb035381b7794696a28326152036c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1008146542}
-  distance: 5
-  height: 2
-  sensitivity: 5
-  minY: -15
-  maxY: 80
 --- !u!114 &784722792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5589,7 +5578,7 @@ Transform:
   m_GameObject: {fileID: 784722790}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 1.47, z: -2.9}
+  m_LocalPosition: {x: 0.017000198, y: 1.117, z: -0.020999908}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5604,12 +5593,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 784722790}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb30f22664f8e9409835cc59968bee0, type: 3}
+  m_Script: {fileID: 11500000, guid: f1b6ba22bb0c098419d1a51633aad62d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstPersonTarget: {fileID: 2124321294}
-  mouseSensitivity: 100
-  playerBody: {fileID: 1008146542}
+  fpsTarget: {fileID: 2124321294}
+  tpsFollowTarget: {fileID: 1008146542}
+  playerMovement: {fileID: 1008146545}
+  mouseSensitivity: 50
+  scrollSensitivity: 2
+  minY: -30
+  maxY: 60
+  distanceFromTarget: 7
+  minDistance: 2
+  maxDistance: 6
+  collisionLayers:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &926305041 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5824825921570538172, guid: 69e5139e44761a4449b64dd0172b7086, type: 3}
@@ -5742,6 +5741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   cameraTransform: {fileID: 784722795}
+  isInFirstPerson: 0
 --- !u!136 &1008146546
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5873,7 +5873,7 @@ GameObject:
   - component: {fileID: 1448615668}
   - component: {fileID: 1448615670}
   - component: {fileID: 1448615669}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
