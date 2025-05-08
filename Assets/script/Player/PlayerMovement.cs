@@ -3,23 +3,30 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float walkSpeed = 5f;
+    public float runSpeed = 10f;
     public Transform cameraTransform;
 
     [HideInInspector]
     public bool isInFirstPerson = false;
 
+    private float currentSpeed;
     private Rigidbody rb;
+    private Animator animator;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     void FixedUpdate()
     {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
+
+        // Choix de la vitesse selon l'état de course
+        currentSpeed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
 
         Vector3 camForward = cameraTransform.forward;
         Vector3 camRight = cameraTransform.right;
@@ -38,8 +45,9 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 0.1f);
         }
 
-        Vector3 movement = moveDirection * moveSpeed * Time.fixedDeltaTime;
+        Vector3 movement = moveDirection * currentSpeed * Time.fixedDeltaTime;
         rb.MovePosition(rb.position + movement);
     }
 }
+
 

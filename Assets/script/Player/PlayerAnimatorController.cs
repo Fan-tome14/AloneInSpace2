@@ -8,6 +8,7 @@ public class PlayerAnimationController : MonoBehaviour
     private bool isInJump = false;
     private float jumpTimer = 0f;
     private float jumpDuration = 1f; // Durée fixe du saut en secondes
+    
 
     void Update()
     {
@@ -50,7 +51,8 @@ public class PlayerAnimationController : MonoBehaviour
             if (isRunning)
             {
                 animator.Play("Rig|run"); // Animation de course
-            }
+                
+}
             else
             {
                 animator.Play("Rig|walk"); // Animation de marche

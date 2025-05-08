@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "D:\\UNITY\\Alone in space\\AloneInSpace2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\Player\\Switchcamerafirstpersonne.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\script\\Player\\Switchcamerafirstpersonne.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\Player\\PlayerMovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\script\\Player\\PlayerMovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\Player\\PlayerAnimatorController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\script\\Player\\PlayerAnimatorController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\Player\\Vue FPS TPS.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\script\\Player\\Vue FPS TPS.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\Player\\Switchcamerafirstpersonne.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\script\\Player\\Switchcamerafirstpersonne.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\Player\\CameraController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,36 +34,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "PlayerAnimatorController.cs",
+              "DocumentMoniker": "D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\Player\\PlayerAnimatorController.cs",
+              "RelativeDocumentMoniker": "Assets\\script\\Player\\PlayerAnimatorController.cs",
+              "ToolTip": "D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\Player\\PlayerAnimatorController.cs",
+              "RelativeToolTip": "Assets\\script\\Player\\PlayerAnimatorController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T16:46:33.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Vue FPS TPS.cs",
+              "DocumentMoniker": "D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\Player\\Vue FPS TPS.cs",
+              "RelativeDocumentMoniker": "Assets\\script\\Player\\Vue FPS TPS.cs",
+              "ToolTip": "D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\Player\\Vue FPS TPS.cs",
+              "RelativeToolTip": "Assets\\script\\Player\\Vue FPS TPS.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAiwHcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T15:43:13.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Switchcamerafirstpersonne.cs",
               "DocumentMoniker": "D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\Player\\Switchcamerafirstpersonne.cs",
               "RelativeDocumentMoniker": "Assets\\script\\Player\\Switchcamerafirstpersonne.cs",
               "ToolTip": "D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\Player\\Switchcamerafirstpersonne.cs",
               "RelativeToolTip": "Assets\\script\\Player\\Switchcamerafirstpersonne.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAiwFAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-07T18:43:14.647Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\Player\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\script\\Player\\PlayerMovement.cs",
               "ToolTip": "D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\Player\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\script\\Player\\PlayerMovement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T17:23:55.637Z"
+              "WhenOpened": "2025-05-07T17:23:55.637Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "CameraController.cs",
               "DocumentMoniker": "D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\Player\\CameraController.cs",
               "RelativeDocumentMoniker": "Assets\\script\\Player\\CameraController.cs",
@@ -67,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "DoorTrigger.cs",
               "DocumentMoniker": "D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\debut\\porte\\DoorTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\script\\debut\\porte\\DoorTrigger.cs",

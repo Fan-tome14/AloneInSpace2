@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "Assets\\script\\Player\\Switchcamerafirstpersonne.cs",
               "ToolTip": "D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\Player\\Switchcamerafirstpersonne.cs",
               "RelativeToolTip": "Assets\\script\\Player\\Switchcamerafirstpersonne.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-07T18:43:14.647Z",
               "EditorCaption": ""
@@ -51,8 +51,7 @@
               "RelativeToolTip": "Assets\\script\\Player\\PlayerMovement.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T17:23:55.637Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-07T17:23:55.637Z"
             },
             {
               "$type": "Document",
@@ -64,8 +63,7 @@
               "RelativeToolTip": "Assets\\script\\Player\\CameraController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T17:17:57.281Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-07T17:17:57.281Z"
             },
             {
               "$type": "Document",
