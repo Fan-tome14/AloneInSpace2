@@ -62,13 +62,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\script\debut\porte\DoorTrigger.cs" />
+    <Compile Include="Assets\script\UI Manager\SettingMenu.cs" />
     <Compile Include="Assets\script\debut\portal\portalscenechanged.cs" />
     <Compile Include="Assets\script\Player\PlayerAnimatorController.cs" />
     <Compile Include="Assets\script\Player\PlayerMovement.cs" />
     <Compile Include="Assets\script\UI Manager\PauseMenuManager.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\script\Player\PlayerAnimatorController2.cs" />
+    <Compile Include="Assets\script\UI Manager\SettingManager.cs" />
     <Compile Include="Assets\script\Player\Vue FPS TPS.cs" />
+    <Compile Include="Assets\script\UI Manager\Togglefullscreencolor.cs" />
     <Compile Include="Assets\script\Player\Switchcamerafirstpersonne.cs" />
   </ItemGroup>
   <ItemGroup>
