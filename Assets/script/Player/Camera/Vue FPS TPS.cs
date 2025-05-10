@@ -1,19 +1,26 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class CameraViewSwitcher : MonoBehaviour
 {
-    [Header("Références")]
-    public Transform fpsTarget;         // Tête du joueur (FPS)
+    public Camera playerCamera; // Assigne ta camÃ©ra principale ici dans lâ€™inspecteur
+    [Header("Layer du corps joueur")]
+    [Tooltip("Layer Ã  exclure en vue FPS")]
+    public LayerMask playerBodyLayer; // assignÃ© via lâ€™inspecteur (checkbox)
+
+    private int playerBodyLayerMask;
+
+    [Header("RÃ©fÃ©rences")]
+    public Transform fpsTarget;         // TÃªte du joueur (FPS)
     public Transform tpsFollowTarget;   // Corps du joueur (TPS)
     public PlayerMovement playerMovement;
 
-    [Header("Sensibilité")]
+    [Header("SensibilitÃ©")]
     public float mouseSensitivity = 3f;
     public float scrollSensitivity = 2f;
     public float minY = -30f;
     public float maxY = 60f;
 
-    [Header("Distance de la caméra")]
+    [Header("Distance de la camÃ©ra")]
     public float distanceFromTarget = 4f;
     public float minDistance = 2f;
     public float maxDistance = 6f;
@@ -32,7 +39,9 @@ public class CameraViewSwitcher : MonoBehaviour
         Cursor.visible = false;
 
         isFirstPerson = false;
+        playerBodyLayerMask = playerBodyLayer.value;
         SwitchToTPS();
+
     }
 
     void Update()
@@ -92,13 +101,13 @@ public class CameraViewSwitcher : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(pitch, yaw, 0);
         Vector3 desiredCameraOffset = rotation * Vector3.back * distanceFromTarget;
 
-        // Collision : raycast depuis le joueur vers la position désirée
+        // Collision : raycast depuis le joueur vers la position dÃ©sirÃ©e
         Vector3 targetPosition = tpsFollowTarget.position + Vector3.up * 1.5f;
         Vector3 desiredPosition = targetPosition + desiredCameraOffset;
 
         if (Physics.Raycast(targetPosition, desiredCameraOffset.normalized, out RaycastHit hit, distanceFromTarget, collisionLayers))
         {
-            // Position ajustée à l'impact
+            // Position ajustÃ©e Ã  l'impact
             desiredPosition = hit.point - desiredCameraOffset.normalized * 0.2f;
         }
 
@@ -109,11 +118,17 @@ public class CameraViewSwitcher : MonoBehaviour
     void SwitchToFPS()
     {
         xRotation = 0f;
+
+        if (playerCamera != null)
+            playerCamera.cullingMask &= ~playerBodyLayerMask; // exclure
     }
 
     void SwitchToTPS()
     {
         yaw = tpsFollowTarget.eulerAngles.y;
         pitch = 20f;
+
+        if (playerCamera != null)
+            playerCamera.cullingMask |= playerBodyLayerMask; // inclure
     }
 }
