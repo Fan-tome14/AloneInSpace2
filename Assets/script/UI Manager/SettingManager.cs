@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;  // Assurez-vous que ce namespace est inclus pour TMP
+using TMPro;
 using UnityEngine.Audio;
 using System.Collections.Generic;
 
 public class SettingsManager : MonoBehaviour
 {
-    public AudioMixer audioMixer;  // Audio Mixer que tu vas utiliser pour contrôler le volume
+    public AudioMixer audioMixer;  // Audio Mixer pour contrôler le volume
     public Slider volumeSlider;    // Slider pour le volume
     public TMP_Dropdown qualityDropdown;  // Dropdown pour la qualité graphique
     public TMP_Dropdown resolutionDropdown;  // Dropdown pour la résolution
@@ -78,5 +78,20 @@ public class SettingsManager : MonoBehaviour
     {
         Screen.fullScreen = isFullscreen;
     }
-}
 
+    // Cette méthode sera appelée pour appliquer les changements dans le menu paramètres
+    public void ApplySettings()
+    {
+        // Appliquer la résolution
+        SetResolution(resolutionDropdown.value);
+
+        // Appliquer la qualité graphique
+        SetQuality(qualityDropdown.value);
+
+        // Appliquer le mode plein écran
+        SetFullscreen(fullscreenToggle.isOn);
+
+        // Appliquer le volume
+        SetVolume(volumeSlider.value);
+    }
+}

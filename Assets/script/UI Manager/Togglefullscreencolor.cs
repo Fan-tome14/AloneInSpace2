@@ -1,64 +1,59 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class FullscreenToggleColor : MonoBehaviour
 {
-    public Toggle fullscreenToggle;  // Le Toggle de plein écran
-    public Text toggleText;          // Le texte du Toggle
-    public Color fullscreenColor = Color.green;  // Couleur verte pour plein écran
-    public Color windowedColor = Color.red;      // Couleur rouge pour mode fenêtré
-    public Color hoverColor = Color.blue;        // Couleur bleue pour survol souris
+    public Toggle togglePleinEcran;                // Le Toggle UI
+    public Image checkmarkImage;                   // L'image du Checkmark
+    public Color couleurPleinEcran = Color.green;  // Couleur si plein écran
+    public Color couleurFenetre = Color.red;       // Couleur si fenêtré
 
     void Start()
     {
-        // Si le texte n'est pas assigné, on le récupère automatiquement
-        if (toggleText == null)
+        // Vérifier si le Checkmark a été assigné
+        if (checkmarkImage == null && togglePleinEcran != null)
         {
-            toggleText = fullscreenToggle.GetComponentInChildren<Text>();
+            Transform background = togglePleinEcran.transform.Find("Background");
+            if (background != null)
+            {
+                Transform checkmark = background.Find("Checkmark");
+                if (checkmark != null)
+                {
+                    checkmarkImage = checkmark.GetComponent<Image>();
+                }
+            }
         }
 
-        // Assurez-vous que la couleur du texte soit visible dès le départ
-        toggleText.color = windowedColor;  // Par défaut, force la couleur du texte à être rouge
+        // Afficher l'état initial du toggle
+        if (togglePleinEcran != null)
+        {
+            Debug.Log("Initial toggle state: " + togglePleinEcran.isOn);
+        }
 
-        // Initialiser la couleur en fonction de l'état actuel du plein écran
-        UpdateToggleColor();
+        // Appliquer l'état initial de la couleur du checkmark en fonction du toggle
+        MettreAJourEtat();
+
+        // Ajouter un listener pour détecter les changements du Toggle
+        if (togglePleinEcran != null)
+        {
+            togglePleinEcran.onValueChanged.AddListener(delegate { MettreAJourEtat(); });
+        }
     }
 
-    void Update()
+    private void MettreAJourEtat()
     {
-        // Vérifier l'état du Toggle et ajuster la couleur du texte
-        if (fullscreenToggle.isOn)
-        {
-            toggleText.color = fullscreenColor;  // Vert si plein écran
-        }
-        else
-        {
-            toggleText.color = windowedColor;    // Rouge si mode fenêtre
-        }
-    }
+        if (togglePleinEcran == null || checkmarkImage == null) return;
 
-    // Lors du survol de la souris, changer la couleur du texte en bleu
-    public void OnMouseEnter()
-    {
-        toggleText.color = hoverColor;  // Changer la couleur en bleu lors du survol
-    }
+        bool estPleinEcran = togglePleinEcran.isOn;
 
-    // Lors du retrait de la souris, revenir à la couleur normale
-    public void OnMouseExit()
-    {
-        UpdateToggleColor();  // Remet la couleur en fonction de l'état du Toggle
-    }
+        // Afficher un log pour suivre l'état du toggle et du checkmark
+        Debug.Log("Toggle State Changed: " + estPleinEcran);
 
-    // Mettre à jour la couleur en fonction de l'état du plein écran
-    private void UpdateToggleColor()
-    {
-        if (fullscreenToggle.isOn)
-        {
-            toggleText.color = fullscreenColor;  // Vert si plein écran
-        }
-        else
-        {
-            toggleText.color = windowedColor;    // Rouge si mode fenêtre
-        }
+        // Appliquer la couleur du Checkmark en fonction de l'état du Toggle
+        checkmarkImage.color = estPleinEcran ? couleurPleinEcran : couleurFenetre;
+
+        // Vérifier que la couleur du Checkmark est bien appliquée
+        Debug.Log("Checkmark color: " + checkmarkImage.color);
     }
 }
