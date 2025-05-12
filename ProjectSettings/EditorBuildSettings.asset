@@ -14,6 +14,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/decollage.unity
     guid: 17833e4888cffad468ef1ed2a8736754
+  - enabled: 1
+    path: Assets/Scenes/Jour1.unity
+    guid: 76555c4f2292ce74ca22c046e6de9118
+  - enabled: 1
+    path: Assets/Scenes/Jour2.unity
+    guid: ce973aeb321fc474c8f8a781cfcb4948
+  - enabled: 1
+    path: Assets/Scenes/Jour3.unity
+    guid: 1066393cd90931242a1ab1d3ed0c5279
+  - enabled: 1
+    path: Assets/Scenes/fin.unity
+    guid: a4358d85919c90a4eb8afecd8e3e085d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
