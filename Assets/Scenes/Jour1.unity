@@ -41657,7 +41657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 2027504455}
-  settingsMenuUI: {fileID: 0}
+  settingsMenuUI: {fileID: 1376228758}
   settingsManager: {fileID: 1702276546}
   scriptsToDisable:
   - {fileID: 1779845768}

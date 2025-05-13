@@ -5,10 +5,9 @@ public class MenuManager : MonoBehaviour
 {
     public GameObject pauseMenuUI;
     public GameObject settingsMenuUI;
+    public GameObject backgroundParametre;
     public SettingsManager settingsManager; // Référence au SettingsManager pour appliquer les changements
     public MonoBehaviour[] scriptsToDisable; // Les scripts à désactiver pendant pause
-
-    private bool isPaused = false;
 
     void Update()
     {
@@ -27,10 +26,10 @@ public class MenuManager : MonoBehaviour
     {
         pauseMenuUI.SetActive(true);
         settingsMenuUI.SetActive(false);
+        backgroundParametre.SetActive(false);
         Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        isPaused = true;
         ToggleScripts(false);
     }
 
@@ -38,10 +37,10 @@ public class MenuManager : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         settingsMenuUI.SetActive(false);
+        backgroundParametre.SetActive(false);
         Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        isPaused = false;
         EventSystem.current.SetSelectedGameObject(null);
         ToggleScripts(true);
     }
@@ -50,12 +49,14 @@ public class MenuManager : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         settingsMenuUI.SetActive(true);
+        backgroundParametre.SetActive(true);
         EventSystem.current.SetSelectedGameObject(null);
     }
 
     public void BackToPauseMenu()
     {
         settingsMenuUI.SetActive(false);
+        backgroundParametre.SetActive(false);
         pauseMenuUI.SetActive(true);
         EventSystem.current.SetSelectedGameObject(null);
     }

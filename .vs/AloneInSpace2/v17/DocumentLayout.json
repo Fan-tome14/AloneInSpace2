@@ -1,28 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Documents\\AloneInSpace2\\",
+  "WorkspaceRootPath": "D:\\UNITY\\Alone in space\\AloneInSpace2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Documents\\AloneInSpace2\\Assets\\script\\decolllage\\SceneChanged.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\script\\decolllage\\SceneChanged.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\Player\\UI Manager\\Menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\script\\Player\\UI Manager\\Menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Documents\\AloneInSpace2\\Assets\\script\\Player\\UI Manager\\SettingManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\Player\\UI Manager\\SettingManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\script\\Player\\UI Manager\\SettingManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Documents\\AloneInSpace2\\Assets\\script\\Player\\Camera\\Vue FPS TPS.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\script\\Player\\Camera\\Vue FPS TPS.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\UI Manager\\Menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\UI Manager\\SettingManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Documents\\AloneInSpace2\\Assets\\script\\debut\\porte\\DoorTrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\script\\debut\\porte\\DoorTrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,76 +18,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SceneChanged.cs",
-              "DocumentMoniker": "C:\\Documents\\AloneInSpace2\\Assets\\script\\decolllage\\SceneChanged.cs",
-              "RelativeDocumentMoniker": "Assets\\script\\decolllage\\SceneChanged.cs",
-              "ToolTip": "C:\\Documents\\AloneInSpace2\\Assets\\script\\decolllage\\SceneChanged.cs",
-              "RelativeToolTip": "Assets\\script\\decolllage\\SceneChanged.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T20:35:21.86Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "SettingManager.cs",
-              "DocumentMoniker": "C:\\Documents\\AloneInSpace2\\Assets\\script\\Player\\UI Manager\\SettingManager.cs",
+              "DocumentMoniker": "D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\Player\\UI Manager\\SettingManager.cs",
               "RelativeDocumentMoniker": "Assets\\script\\Player\\UI Manager\\SettingManager.cs",
-              "ToolTip": "C:\\Documents\\AloneInSpace2\\Assets\\script\\Player\\UI Manager\\SettingManager.cs",
+              "ToolTip": "D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\Player\\UI Manager\\SettingManager.cs",
               "RelativeToolTip": "Assets\\script\\Player\\UI Manager\\SettingManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T16:19:39.873Z",
+              "WhenOpened": "2025-05-13T18:33:19.195Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Vue FPS TPS.cs",
-              "DocumentMoniker": "C:\\Documents\\AloneInSpace2\\Assets\\script\\Player\\Camera\\Vue FPS TPS.cs",
-              "RelativeDocumentMoniker": "Assets\\script\\Player\\Camera\\Vue FPS TPS.cs",
-              "ToolTip": "C:\\Documents\\AloneInSpace2\\Assets\\script\\Player\\Camera\\Vue FPS TPS.cs",
-              "RelativeToolTip": "Assets\\script\\Player\\Camera\\Vue FPS TPS.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAAAIYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T14:42:23.043Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DoorTrigger.cs",
-              "DocumentMoniker": "C:\\Documents\\AloneInSpace2\\Assets\\script\\debut\\porte\\DoorTrigger.cs",
-              "RelativeDocumentMoniker": "Assets\\script\\debut\\porte\\DoorTrigger.cs",
-              "ToolTip": "C:\\Documents\\AloneInSpace2\\Assets\\script\\debut\\porte\\DoorTrigger.cs",
-              "RelativeToolTip": "Assets\\script\\debut\\porte\\DoorTrigger.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T12:11:53.529Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SettingManager.cs",
-              "DocumentMoniker": "D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\UI Manager\\SettingManager.cs",
-              "ToolTip": "D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\UI Manager\\SettingManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T11:28:51.762Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Menumanager.cs",
-              "DocumentMoniker": "D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\UI Manager\\Menumanager.cs",
-              "ToolTip": "D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\UI Manager\\Menumanager.cs",
+              "DocumentMoniker": "D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\Player\\UI Manager\\Menumanager.cs",
+              "RelativeDocumentMoniker": "Assets\\script\\Player\\UI Manager\\Menumanager.cs",
+              "ToolTip": "D:\\UNITY\\Alone in space\\AloneInSpace2\\Assets\\script\\Player\\UI Manager\\Menumanager.cs",
+              "RelativeToolTip": "Assets\\script\\Player\\UI Manager\\Menumanager.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAD8AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T11:20:57.483Z"
+              "WhenOpened": "2025-05-13T17:51:07.39Z",
+              "EditorCaption": ""
             }
           ]
         }
